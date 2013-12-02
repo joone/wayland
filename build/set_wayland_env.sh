@@ -13,7 +13,7 @@ WLD=$HOME/WaylandBuild/rel
 LD_LIBRARY_PATH=$WLD/lib
 PKG_CONFIG_PATH=$WLD/lib/pkgconfig/:$WLD/share/pkgconfig/
 ACLOCAL="aclocal -I $WLD/share/aclocal"
-export PATH=$PATH:/$WLD/bin
+export PATH=$PATH:$WLD/bin
 
 export WLD LD_LIBRARY_PATH PKG_CONFIG_PATH ACLOCAL
 # disable aclocal for autoconf wayland git

@@ -15,12 +15,14 @@ SRC=$HOME/WaylandBuild/src
 LD_LIBRARY_PATH=$WLD/lib
 PKG_CONFIG_PATH=$WLD/lib/pkgconfig/:$WLD/share/pkgconfig/
 ACLOCAL="aclocal -I $WLD/share/aclocal"
+PATH=$PATH:$WLD/bin
 
-export WLD LD_LIBRARY_PATH PKG_CONFIG_PATH
+export WLD LD_LIBRARY_PATH PKG_CONFIG_PATH PATH
 # disable aclocal for autoconf wayland git
 #export WLD LD_LIBRARY_PATH PKG_CONFIG_PATH
 export XDG_RUNTIME_DIR=/tmp/
 export MAKE_COMMAND="make -j4"
+
 ###########################################################
 
 ###########################################################
