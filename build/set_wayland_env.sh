@@ -31,3 +31,4 @@ fi
 
 export MAKE_COMMAND="make -j4"
 ulimit -c unlimited
+export PS1="\e[1;34m\u@wayland:\w$ \e[m"
