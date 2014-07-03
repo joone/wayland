@@ -18,9 +18,9 @@ PKG_CONFIG_PATH=$WLD/lib/pkgconfig/:$WLD/share/pkgconfig/
 ACLOCAL="aclocal -I $WLD/share/aclocal"
 PATH=$PATH:$WLD/bin
 
-WAYLANDBRANCH=1.3
-MESABRANCH=10.0
-WESTONBRANCH=1.3
+WAYLANDBRANCH=1.4
+MESABRANCH=10.1
+WESTONBRANCH=1.4
 
 export WLD LD_LIBRARY_PATH PKG_CONFIG_PATH PATH
 # disable aclocal for autoconf wayland git
@@ -64,6 +64,14 @@ cd ..
 echo "dri2proto clone & build"
 git clone git://anongit.freedesktop.org/xorg/proto/dri2proto
 cd dri2proto
+./autogen.sh --prefix=$WLD
+make
+make install
+cd ..
+###########################################################
+echo "dri3proto clone & build"
+git clone git://anongit.freedesktop.org/xorg/proto/dri3proto
+cd dri3proto
 ./autogen.sh --prefix=$WLD
 make
 make install
